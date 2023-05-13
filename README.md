@@ -13,7 +13,9 @@ vertical centering of `.pull-left[]` and `.pull-right[]` style slides,
 as well as some custom 1/4:3/4 style column splits, text resizing
 classes.
 
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://calumwebb.co.uk/pres/smi-slides-demo/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
-</div>
+A live version of the template can be viewed here:
+[calumwebb.co.uk/pres/smi-slides-demo/](https://calumwebb.co.uk/pres/smi-slides-demo/)
+
+<a href="https://calumwebb.co.uk/pres/smi-slides-demo/">
+<img src="images/slides-preview.png" width="100%"/>
+</a>

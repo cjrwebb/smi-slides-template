@@ -9,11 +9,19 @@ This is a custom slide deck for the Sheffield Methods Institute in University of
 
 This slide deck includes a custom top-only banner header (found in `insert-header.html`), some custom CSS classes to enable independent vertical centering of `.pull-left[]` and `.pull-right[]` style slides, as well as some custom 1/4:3/4 style column splits, text resizing classes.
 
+A live version of the template can be viewed here: [calumwebb.co.uk/pres/smi-slides-demo/](https://calumwebb.co.uk/pres/smi-slides-demo/)
+
 ```{r, echo = FALSE}
 
-xaringanExtra::embed_xaringan(
-  url = "https://calumwebb.co.uk/pres/smi-slides-demo/",
-  ratio = "16:9"
-)
+library(htmltools)
+
+image_link <- function(image,url,...){
+  htmltools::a(
+    href=url,
+    htmltools::img(src=image,...)
+    )
+}
+
+image_link("images/slides-preview.png", url = "https://calumwebb.co.uk/pres/smi-slides-demo/", width = "100%")
 
 ```
