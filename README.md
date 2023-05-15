@@ -18,9 +18,9 @@ resizing classes.
 A live version of the templates can be viewed here:
 
 - Violet:
-  [calumwebb.co.uk/pres/smi-slides-demo/violet/](https://calumwebb.co.uk/pres/smi-slides-demo/)
+  [calumwebb.co.uk/pres/smi-slides-demo/violet/](https://calumwebb.co.uk/pres/smi-slides-demo/violet/)
 - Grey:
-  [calumwebb.co.uk/pres/smi-slides-demo/grey/](https://calumwebb.co.uk/pres/smi-slides-demo/)
+  [calumwebb.co.uk/pres/smi-slides-demo/grey/](https://calumwebb.co.uk/pres/smi-slides-demo/grey/)
 
 <a href="https://calumwebb.co.uk/pres/smi-slides-demo/violet/">
 <img src="images/slides-preview-violet.png" width="100%"/>

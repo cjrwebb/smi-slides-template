@@ -11,8 +11,8 @@ This slide deck includes a custom top-only banner header in both violet and midn
 
 A live version of the templates can be viewed here:
 
-* Violet: [calumwebb.co.uk/pres/smi-slides-demo/violet/](https://calumwebb.co.uk/pres/smi-slides-demo/)
-* Grey: [calumwebb.co.uk/pres/smi-slides-demo/grey/](https://calumwebb.co.uk/pres/smi-slides-demo/)
+* Violet: [calumwebb.co.uk/pres/smi-slides-demo/violet/](https://calumwebb.co.uk/pres/smi-slides-demo/violet/)
+* Grey: [calumwebb.co.uk/pres/smi-slides-demo/grey/](https://calumwebb.co.uk/pres/smi-slides-demo/grey/)
 
 
 ```{r, echo = FALSE}
