@@ -1,0 +1,562 @@
+---
+title: "Title"
+subtitle: ""  
+author: 
+  - "Author"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: ["xaringan-themer.css", "css/custom.css"]
+    seal: false
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      sealed: false
+      ratio: 16:9
+      self_contained: true
+      countIncrementalSlides: true
+    includes:
+      after_body: header/insert-header-violet.html
+---
+
+class: middle, title
+background-size: contain
+
+
+<br><br>
+
+# This is the presentation title
+#### This is a presentation subtitle
+
+<br><br>
+
+**Dr. Calum Webb**<br>
+Sheffield Methods Institute, the University of Sheffield<br>
+[c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+# These packages are required for creating the slides
+# Many will need to be installed from Github
+library(icons)
+library(tidyverse)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+
+# Defaults for code
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  fig.show = TRUE,
+  hiline = TRUE
+)
+
+# set global theme for ggplot to make background #F8F8F8F8 (off white),
+# but otherwise keep all ggplot themes default (better for teaching)
+theme_set(
+  theme(plot.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"))
+  )
+
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+# Use tile overview by hitting the o key when presenting
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-logo, echo=FALSE}
+# Add logo to top right
+xaringanExtra::use_logo(
+  image_url = "header/smi-logo-white.png",
+  exclude_class = c("inverse", "hide_logo"), 
+  width = "180px", position = css_position(top = "1em", right = "2em")
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+
+# Set some global objects containing the colours
+# of the university's branding
+primary_color <- "#131E29"
+secondary_color <- "#440099"
+tuos_blue <- "#9ADBE8"
+white = "#F8F8F8"
+tuos_yellow <- "#FCF281"
+tuos_purple <- "#440099"
+tuos_red <- "#E7004C"
+tuos_midnight <- "#131E29"
+
+# The bulk of the styling is handled by xaringanthemer
+style_duo_accent(
+  primary_color = "#131E29",
+  secondary_color = "#440099",
+  colors = c(tuos_purple = "#440099", 
+             grey = "#131E2960", 
+             tuos_blue ="#9ADBE8",
+             tuos_mint = "#00CE7C"),
+  header_font_google = xaringanthemer::google_font("Source Serif Pro", "600", "600i"),
+  text_font_google   = xaringanthemer::google_font("Source Sans Pro", "300", "300i"),
+  code_font_google   = xaringanthemer::google_font("Lucida Console"),
+  header_h1_font_size = "2rem",
+  header_h2_font_size = "1.5rem",
+  header_h3_font_size = "1.25rem", 
+  text_font_size = "0.9rem",
+  code_font_size = "0.65rem", 
+  code_inline_font_size = "0.85rem",
+  inverse_text_color = "#9ADBE8", 
+  background_color = "#F8F8F8", 
+  text_color = "#131E29", 
+  link_color = "#005A8F", 
+  inverse_link_color = "#F8F8F8",
+  text_slide_number_color = "#44009970"
+)
+
+```
+
+
+```{r xaringan-panelset, echo=FALSE}
+# Allow for adding panelsets (see example on slide 2)
+xaringanExtra::use_panelset()
+```
+
+```{r xaringanExtra, echo = FALSE}
+# Adds white progress bar to top
+xaringanExtra::use_progress_bar(color = "#F8F8F8", location = "top")
+```
+
+```{r xaringan-extra-styles, echo = FALSE}
+# Allow for code to be highlighted on hover
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{r share-again, echo=FALSE}
+# Add sharing links and other embedding tools
+xaringanExtra::use_share_again()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+# Add magnifying glass search function to bottom left for quick
+# searching of slides
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
+
+---
+
+class: middle
+
+## This is a panelset: good for learning objectives
+
+.panelset[
+
+.panel[.panel-name[What will I learn?]
+
+By the end of this week you will:
+
+* LO1
+
+* LO2
+
+* LO3
+
+* LO4
+
+
+]
+
+.panel[.panel-name[How does this week fit into my course?]
+
+* Text
+
+* Text 
+
+* Text
+
+
+]
+
+
+]
+
+
+
+
+---
+class: middle
+
+.pull-left[
+
+# This is text on a regular slide
+
+## This is a smaller heading
+
+### This is a smaller heading
+
+**This is bold text - do not use on inverse slide**
+
+This is regular text
+
+[This is a link.](https://www.sheffield.ac.uk/smi)
+
+
+]
+.pull-right[
+
+This is an image:
+
+```{r, echo = FALSE, fig.cap="This is an image caption"}
+
+knitr::include_graphics("https://www.sheffield.ac.uk/sites/default/files/styles/two_thirds_2x/public/2019-12/IMG_1251.jpg?h=cececfd2&itok=scesYnz6")
+
+
+```
+
+```{r, eval = FALSE}
+
+# This is a code snippet
+mean(mtcars$mpg)
+
+```
+
+
+]
+
+
+---
+class: inverse, middle
+
+
+
+# This is text on the inverse slide: useful for big statements, quotes, or section headings
+
+
+---
+class: middle
+
+### This is an `R` plot that fills the slide
+
+```{r, echo = FALSE}
+
+mtcars %>%
+  ggplot() +
+  geom_point(aes(x = wt, y = mpg))
+
+
+```
+
+
+---
+
+class: middle
+
+.pull-left[
+
+### This is an `R` plot that fills one half of a slide with code shown.
+
+> This is a quote blah blah blah blah blah blah blah blah blah blah blah blah
+
+]
+
+.pull-right[
+
+<br>
+
+```{r, echo = TRUE, fig.height = 4.5, fig.width = 5.5, out.height=450, out.width = 550}
+
+mtcars %>%
+  ggplot() +
+  geom_point(aes(x = wt, y = mpg))
+
+
+```
+
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+If I am using a very long bit of code, I will sometimes have the code on the left (but not evaluated using `eval = FALSE` in the chunk header) so students can see it, and then an evaluated piece of code that doesn't echo on the right, e.g.
+
+
+```{r, echo = TRUE, eval = FALSE, fig.height = 4.5, fig.width = 5.5, out.height=450, out.width = 550}
+
+#' A lot of code for a plot styled like
+#' the slides
+
+mtcars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(col = "#440099") +
+  geom_smooth(method = "lm") +
+  scale_y_log10() + 
+  theme_minimal() +
+  ggtitle("Heavy car, how far do go") +
+  xlab("Car heavy") +
+  ylab("log10(Go far)") +
+  theme_xaringan(title_font_size = 18,
+                 text_font_size = 16, 
+                 title_font = google_font("Source Sans Pro"),
+                 text_font = google_font("Source Sans Pro")) +
+  theme(plot.background = element_rect(fill = "#f8f8f8", 
+                                       colour = "#f8f8f8"),
+        panel.background = element_rect(fill = "#f8f8f8", 
+                                        colour = "#f8f8f8"))
+
+```
+
+<hr>
+
+You can split up content with a horizontal rule using the html tag `<hr>`
+
+]
+
+.pull-right[
+
+<br>
+
+```{r, echo = FALSE, fig.height = 4.5, fig.width = 5.5, out.height=450, out.width = 550}
+
+mtcars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point(col = "#440099") +
+  geom_smooth(method = "lm") +
+  scale_y_log10() + 
+  theme_minimal() +
+  ggtitle("Heavy car, how far do go") +
+  xlab("Car heavy") +
+  ylab("log10(Go far)") +
+  theme_xaringan(title_font_size = 18,
+                 text_font_size = 16, 
+                 title_font = google_font("Source Sans Pro"),
+                 text_font = google_font("Source Sans Pro")) +
+  theme(plot.background = element_rect(fill = "#f8f8f8", colour = "#f8f8f8"),
+        panel.background = element_rect(fill = "#f8f8f8", colour = "#f8f8f8"))
+
+
+```
+
+
+
+
+]
+
+
+
+---
+
+class: middle
+
+.pull-left-small[
+
+If you need a bit more space for an image, and less space for text, you can use the `pull-left-small[]`, `pull-right-small[]`, `pull-left-big[]`, and `pull-right-big[]` versions of the pull class.
+
+If you want an image to fill an entire slide, you can use the `background-image`, `background-position` and `background-size` options...
+
+]
+
+.pull-right-big[
+
+```{r, echo = FALSE, out.width="100%"}
+
+knitr::include_graphics("https://www.sheffield.ac.uk/sites/default/files/styles/3_1_max_2250w/public/2020-08/31312.jpg.jpeg")
+
+
+```
+
+]
+
+---
+
+class: middle
+background-image: url("https://pbs.twimg.com/media/Fut69EWXwAAdTOn?format=jpg&name=large")
+background-position: center
+background-size: contain
+
+# .shadow[This can be done with the banner...]
+
+---
+
+class: hide-logo, middle
+background-image: url("https://pbs.twimg.com/media/Fut69EWXwAAdTOn?format=jpg&name=large")
+background-position: center
+background-size: contain
+
+# .shadow[Or without, if class: hide-logo is used...]
+
+---
+
+class: inverse, middle
+background-image: url("https://pbs.twimg.com/media/Fut69EWXwAAdTOn?format=jpg&name=large")
+background-position: center
+background-size: contain
+
+# .shadow[Or with neither logo or banner is class: inverse is used.]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+.center[This text is centered using `.center[]`]
+
+.right[This text is right-aligned using `.right[]`]
+
+* This is a bullet list
+* Alignment also works
+* for
+* images/code output/etc
+
+*This text is in italics*.
+
+If you want text to be slightly larger on a specific slide, you can .big[use the custom `.big[]` class].
+
+If you want text to be slightly smaller, you can .small[use the custom `.small[]` class]
+
+
+]
+
+.pull-right[
+
+You can also use webicons with the `fontawesome()` function from the `icons` github package, with backticks around them e.g. 
+
+`r icons::fontawesome("twitter")` .small[ `` `r '\x60r icons::fontawesome("twitter")\x60'` `` ]<br>
+
+`r icons::fontawesome("rocket")` .small[ `` `r '\x60r icons::fontawesome("rocket")\x60'` `` ] <br>
+
+`r icons::fontawesome("github")` .small[ `` `r '\x60r icons::fontawesome("github")\x60'` `` ] <br>
+
+`r icons::fontawesome("times-circle")` .small[ `` `r '\x60r icons::fontawesome("times-circle")\x60'` `` ] <br> 
+
+`r icons::fontawesome("check")` .small[ `` `r '\x60r icons::fontawesome("check")\x60'` `` ] <br>
+
+`r icons::fontawesome("question-circle")` .small[ `` `r '\x60r icons::fontawesome("question-circle")\x60'` `` ]<br>
+
+`r icons::fontawesome("comments")` .small[ `` `r '\x60r icons::fontawesome("comments")\x60'` `` ]<br>
+
+`r icons::fontawesome("coffee")` .small[ `` `r '\x60r icons::fontawesome("coffee")\x60'` `` ]<br>
+
+.center[You can search all available icons [here](https://fontawesome.com/v4/icons/).]
+
+]
+
+
+---
+
+class: middle
+
+.pull-left[
+
+$$ Pr(\bar{Y}=1) = \frac{e^{ \beta_0 + \beta_1X_1 + \beta_2x_2 }}{(1 + e^{ \beta_0 + \beta_1X_1 + \beta_2x_2 })} $$
+.center[This is an equation: wow, it's so beautiful!]
+
+]
+
+--
+
+.pull-right[
+
+### Equations are also supported in slides
+
+You can use single &dollar; signs to enclose an inline equation (e.g. $X_1$), or double dollar signs &dollar;&dollar; to create a block equation like on the left.
+
+### Something that annoys me...
+
+You might have noticed that these slides irritatingly float left and right blocks to be top-aligned rather than middle aligned when they have different sized content. You can fix this either with repeated breaks spacers `<br>` or you can use the custom `.middle-left[]` or `.middle-right[]` classes I wrote and added to the custom CSS.
+
+
+]
+
+<br>
+
+--
+
+.center[.tuos_purple[P.S.] You can add incremental slides like these using `--` between paragraphs, but this doesn't work *within* `.pull-left[]`, `.pull-right[]` split column slides, unfortunately.]
+
+
+---
+
+class: middle
+
+.middle-left[
+
+
+$$ Pr(Y=1) = \frac{e^{ \beta_0 + \beta_1X_1 + \beta_2x_2 }}{(1 + e^{ \beta_0 + \beta_1X_1 + \beta_2x_2 })} $$
+
+.center[This is an equation: wow, it's even more beautiful!]
+
+
+
+
+]
+
+.middle-right[
+
+
+### Equations are also supported in slides
+
+You can use single .tuos_mint[&dollar;] signs to enclose an inline equation (e.g. $X_1$), or double dollar signs .tuos_mint[&dollar;&dollar;] to create a block equation like on the left.
+
+### Something that annoys me...
+
+You might have noticed that these slides irritatingly float left and right blocks to be top-aligned rather than middle aligned when they have different sized content. You can fix this either with repeated breaks spacers `<br>` or you can use the custom `.middle-left[]` or `.middle-right[]` classes I wrote and added to the custom CSS.
+
+
+]
+
+---
+
+class: middle
+
+.middle-left-small[
+
+.center[
+
+```{r echo = FALSE, out.width = "90%"}
+
+knitr::include_graphics("header/staff-photo.png")
+
+```
+
+]
+
+]
+
+.middle-right-big[
+
+## Dr. Calum Webb
+#### .tuos_purple[Sheffield Methods Institute]<br>The University of Sheffield<br>The Wave, 2 Whitham Road<br>Sheffield<br>S10 2AH
+
+#### [c.j.webb@sheffield.ac.uk](mailto:c.j.webb@sheffield.ac.uk)
+
+
+These custom classes also have equivalent `-big` and `-small` versions, e.g. `.middle-left-small[]`, `.middle-right-big[]`, that can be paired up. Perfect for staff profiles.
+
+
+]
+
+---
+
+class: middle
+
+.center[
+
+PDF versions of slides can be created using the excellent `renderthis` package. You will need to install `chromote` and `pdftools` as well. 
+
+These slides were saved as pdf using the following code: <br>`renderthis::to_pdf(from = "smi-xaringan-template.html", to = "smi-xaringan-template.pdf", complex_slides = TRUE)`
+
+]
