@@ -18,7 +18,7 @@
  *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,600i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Lucida+Console&display=swap);
 
@@ -113,7 +113,7 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 strong {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--text-bold-color);
 }
 a, a > code {
@@ -186,8 +186,8 @@ blockquote {
 }
 .remark-slide table {
   margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  border-top: 1px solid #44009970;
+  border-bottom: 1px solid #44009970;
 }
 .remark-slide table thead th {
   border-bottom: 1px solid #ddd;
@@ -198,7 +198,7 @@ th, td {
 .remark-slide table:not(.table-unshaded) thead,
 .remark-slide table:not(.table-unshaded) tfoot,
 .remark-slide table:not(.table-unshaded) tr:nth-child(even) {
-  background: #D9CCEA;
+  background: transparent;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -208,7 +208,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #D9CCEA;
+  background-color: transparent;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);

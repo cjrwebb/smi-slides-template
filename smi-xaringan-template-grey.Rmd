@@ -102,10 +102,10 @@ style_duo_accent(
              tuos_blue ="#9ADBE8",
              tuos_mint = "#00CE7C"),
   header_font_google = xaringanthemer::google_font("Source Serif Pro", "600", "600i"),
-  text_font_google   = xaringanthemer::google_font("Source Sans Pro", "300", "300i"),
+  text_font_google   = xaringanthemer::google_font("Source Sans Pro", "300", "300i", "600", "600i"),
   code_font_google   = xaringanthemer::google_font("Lucida Console"),
   header_h1_font_size = "2rem",
-  header_h2_font_size = "1.5rem",
+  header_h2_font_size = "1.5rem", 
   header_h3_font_size = "1.25rem", 
   text_font_size = "0.9rem",
   code_font_size = "0.65rem", 
@@ -115,7 +115,10 @@ style_duo_accent(
   text_color = "#131E29", 
   link_color = "#005A8F", 
   inverse_link_color = "#F8F8F8",
-  text_slide_number_color = "#44009970"
+  text_slide_number_color = "#44009970",
+  table_row_even_background_color = "transparent", 
+  table_border_color = "#44009970",
+  text_bold_font_weight = 600
 )
 
 ```
@@ -149,6 +152,7 @@ xaringanExtra::use_share_again()
 # searching of slides
 xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
 ```
+
 
 ---
 
