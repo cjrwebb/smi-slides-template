@@ -61,7 +61,8 @@ knitr::opts_chunk$set(
 # set global theme for ggplot to make background #F8F8F8F8 (off white),
 # but otherwise keep all ggplot themes default (better for teaching)
 theme_set(
-  theme(plot.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"))
+  theme(plot.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"), 
+        panel.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"))
   )
 
 ```
