@@ -63,8 +63,53 @@
   float: right;
 }
 
-.hljs-github .hljs {
+
+.hljs-default .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.1em;
+    color: #131E29;
     background: #131E2915;
+    background-color: #131E2915
+}
+
+.hljs-github .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.1em;
+  color: #131E29;
+  background: #131E2915;
+}
+
+.remark-code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.1em;
+  color: #131E29;
+  background: #f8f8f8;
+}
+
+pre:not([class]) {
+    background-color: #f8f8f8;
+}
+
+
+pre {
+    display: block;
+    padding: 5.5px;
+    margin: 0 0 6px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.panel {
+  background: #f8f8f8;
 }
 
 /* Custom class for absolute two-column layouts  */
@@ -122,5 +167,10 @@
   top: 50%;
   transform: translate(0%, -50%);
 }
+
+.panel {
+  background: #f8f8f8;
+}
+
 
 
