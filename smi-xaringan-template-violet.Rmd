@@ -62,7 +62,9 @@ knitr::opts_chunk$set(
 # but otherwise keep all ggplot themes default (better for teaching)
 theme_set(
   theme(plot.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"), 
-        panel.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"))
+        panel.background = element_rect(fill = "#F8F8F8", colour = "#F8F8F8"),
+        legend.key = element_rect(fill = "#F8F8F8")
+        )
   )
 
 ```
